@@ -3,6 +3,8 @@ telethon-session-sqlalchemy
 setuptools
 wheel
 aiofiles
+flask
+flask_restful
 aiohttp
 akinator.py
 apscheduler
