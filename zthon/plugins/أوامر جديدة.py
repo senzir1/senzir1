@@ -109,6 +109,13 @@ async def _(event):
         await event.reply(f"يب منصب سيدي المطور 🙈♥ .")
 
 
+@zedub.on(events.NewMessage(pattern="/مين انا؟"))
+async def _(event):
+    user = await event.get_sender()
+    zed_dev = (6301863282, 7843852982, 6556390631)
+    if user.id in zed_dev:
+        await event.reply(f"انت مطوري العزيز 🙈🥺 .")
+
 @zedub.on(events.NewMessage(pattern="/المطور"))
 async def _(event):
     user = await event.get_sender()
