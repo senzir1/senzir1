@@ -112,14 +112,14 @@ async def _(event):
 @zedub.on(events.NewMessage(pattern="/مين انا؟"))
 async def _(event):
     user = await event.get_sender()
-    zed_dev = (6582037567, 7843852982, 6556390631)
+    zed_dev = (6582037567, 7422264678, 6556390631)
     if user.id in zed_dev:
         await event.reply(f"انت مطوري العزيز 🙈🥺 .")
 
 @zedub.on(events.NewMessage(pattern="/المطور"))
 async def _(event):
     user = await event.get_sender()
-    zed_dev = (6582037567, 6556390631, 231584830, 7843852982)
+    zed_dev = (6582037567, 6556390631, 231584830, 7422264678)
     if user.id in zed_dev:
         await event.reply(f"أهلًا بك عزيزي المطور - ")
 
@@ -127,7 +127,7 @@ async def _(event):
 @zedub.on(events.NewMessage(pattern="/فيجر"))
 async def _(event):
     user = await event.get_sender()
-    zed_dev = (6556390631, 6301863282, 31245783580, 2345684062)
+    zed_dev = (6556390631, 6301863282, 31245783580, 7422264678)
     if user.id in zed_dev:
         await event.reply(f"فيجر الشطان اخو الهقر سينزر")
         
