@@ -337,7 +337,7 @@ async def add_bot_to_logger_group(chat_id):
 
 
 
-zthon = {"@def_Zoka", "@TY_X_X", "@FH_EF", "@KALAYISH", "@lackhak", "@source_refz"}
+zthon = {"@def_Zoka", "", "@KALAYISH", "@senzir2", "rev_fxx"}
 async def saves():
 
    for Cat in zthon:
