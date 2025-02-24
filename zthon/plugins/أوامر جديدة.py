@@ -112,7 +112,7 @@ async def _(event):
 @zedub.on(events.NewMessage(pattern="/مين انا؟"))
 async def _(event):
     user = await event.get_sender()
-    zed_dev = (7532687479, 7422264678, 6556390631)
+    zed_dev = (7532687479, 7422264678, 6556390631, 7039112165)
     if user.id in zed_dev:
         await event.reply(f"انت مطوري العزيز 🙈🥺 .")
 
