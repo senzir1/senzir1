@@ -69,6 +69,7 @@ video_opts = {
     "writethumbnail": True,
     "prefer_ffmpeg": True,
     "geo_bypass": True,
+    "cookiefile": cookies_file,
     "nocheckcertificate": True,
     "postprocessors": [
         {"key": "FFmpegVideoConvertor", "preferedformat": "mp4"},
