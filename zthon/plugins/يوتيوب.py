@@ -46,6 +46,8 @@ from ..helpers.tools import media_type
 from ..helpers.utils import _format, reply_id, _zedutils
 from . import BOTLOG, BOTLOG_CHATID, zedub
 
+cookies_file = "senzir1/zthon/plugins/cookies.txt"
+
 BASE_YT_URL = "https://www.youtube.com/watch?v="
 extractor = URLExtract()
 LOGS = logging.getLogger(__name__)
