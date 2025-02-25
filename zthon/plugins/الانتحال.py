@@ -13,6 +13,7 @@ DEFAULTUSER = gvarstatus("FIRST_NAME") or ALIVE_NAME
 DEFAULTUSERBIO = Config.DEFAULT_BIO or "- ‏وحدي أضيء، وحدي أنطفئ انا قمري و كُل نجومي..🤍"
 ANTHAL = gvarstatus("ANTHAL") or "(إعـادة الحـسـاب|اعادة|اعاده)"
 
+# تعديل وتطوير T.me/senzir1
 @zedub.zed_cmd(pattern="نسخ|انتحال(?:\s|$)([\s\S]*)")
 async def _(event):
     replied_user, error_i_a = await get_user_from_event(event)
@@ -55,4 +56,5 @@ async def _(event):
             BOTLOG_CHATID,
             f"#الانتحـــال\n ⪼ تم انتحـال حسـاب الشخـص ↫ [{first_name}](tg://user?id={user_id}) بنجاح ✅"
         )
-        
+
+# تعديل وتطوير T.me/senzir1
