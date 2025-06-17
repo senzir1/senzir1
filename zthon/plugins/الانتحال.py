@@ -1,60 +1,138 @@
+"""
+❃ `{i}انتحال <بالرد على الشخص/يوزره>`
+    لـ انتحال حساب المستخدم من اسم وصورة الخ.. 
+
+❃ `{i}اعادة`
+    لـ رجوع الحساب الى وضعه الطبيعي
+    
+⚠️ تـنبيـه : هذه الامر قد يكون مخالف لسياسة التليجرام اذا تم التبليغ عنك بصفة أنتحال لذا أستعمله حسب مسؤوليتك
+"""
+
 import html
-import os
-from telethon.tl import functions
+
+from telethon.tl.functions.account import UpdateProfileRequest
+from telethon.tl.functions.photos import (DeletePhotosRequest,
+                                          UploadProfilePhotoRequest)
 from telethon.tl.functions.users import GetFullUserRequest
-from telethon.errors import PhotoCropSizeSmallError, ImageProcessFailedError, StickerMimeInvalidError
+from telethon.tl.types import MessageEntityMentionName
 
-from ..Config import Config
-from . import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, zedub, edit_delete, get_user_from_event
-from ..sql_helper.globals import gvarstatus
+from .. import *
 
-plugin_category = "العروض"
-DEFAULTUSER = gvarstatus("FIRST_NAME") or ALIVE_NAME
-DEFAULTUSERBIO = Config.DEFAULT_BIO or "- ‏وحدي أضيء، وحدي أنطفئ انا قمري و كُل نجومي..🤍"
-ANTHAL = gvarstatus("ANTHAL") or "(إعـادة الحـسـاب|اعادة|اعاده)"
 
-@zedub.zed_cmd(pattern="نسخ|انتحال(?:\s|$)([\s\S]*)")
+@zedub.zed_cmd(pattern="انتحال ?(.*)", fullsudo=True)
 async def _(event):
-    replied_user, error_i_a = await get_user_from_event(event)
+    eve = await event.eor("**⌔∮ جار أنتحال المستخدم...**")
+    reply_message = await event.get_reply_message()
+    whoiam = await event.client(GetFullUserRequest(jmubot.uid))
+    if whoiam.full_user.about:
+        mybio = str(jmubot.me.id) + "01"
+        jmdB.set_key(f"{mybio}", whoiam.full_user.about)
+    jmdB.set_key(f"{jmubot.uid}02", whoiam.users[0].first_name)
+    if whoiam.users[0].last_name:
+        jmdB.set_key(f"{jmubot.uid}03", whoiam.users[0].last_name)
+    replied_user, error_i_a = await get_full_user(event)
     if replied_user is None:
-        return await edit_delete(event, "**لم يتم العثور على المستخدم!**")
-
-    user_id = replied_user.id
-
-    # تحميل صورة الملف الشخصي
-    profile_pic = None
-    try:
-        profile_pic = await event.client.download_profile_photo(user_id, file=Config.TEMP_DIR)
-    except Exception:
-        profile_pic = None
-
-    # جلب الاسم والنبذة
-    first_name = html.escape(replied_user.first_name or "").replace("\u2060", "")
-    last_name = html.escape(replied_user.last_name or "").replace("\u2060", "") if replied_user.last_name else "⁪⁬⁮⁮⁮⁮ ‌‌‌‌"
-    full_user = await event.client(GetFullUserRequest(user_id))
-    user_bio = full_user.full_user.about or " "
-
-    # تحديث البيانات الشخصية
-    await event.client(functions.account.UpdateProfileRequest(first_name=first_name))
-    await event.client(functions.account.UpdateProfileRequest(last_name=last_name))
-    await event.client(functions.account.UpdateProfileRequest(about=user_bio))
-
-    # رفع الصورة الشخصية
+        await eve.edit(str(error_i_a))
+        return
+    user_id = replied_user.users[0].id
+    profile_pic = await event.client.download_profile_photo(user_id)
+    first_name = html.escape(replied_user.users[0].first_name)
+    if first_name is not None:
+        first_name = first_name.replace("\u2060", "")
+    last_name = replied_user.users[0].last_name
+    if last_name is not None:
+        last_name = html.escape(last_name)
+        last_name = last_name.replace("\u2060", "")
+    if last_name is None:
+        last_name = "⁪⁬⁮⁮⁮"
+    user_bio = replied_user.full_user.about
+    await event.client(UpdateProfileRequest(first_name=first_name, last_name=last_name, about=user_bio))
     if profile_pic:
-        try:
-            pfile = await event.client.upload_file(profile_pic)
-            await event.client(functions.photos.UploadProfilePhotoRequest(file=pfile))
-        except (PhotoCropSizeSmallError, ImageProcessFailedError, StickerMimeInvalidError):
-            await edit_delete(event, "**⚠️ لم يتم رفع الصورة: قد تكون غير مدعومة أو صغيرة جدًا.**")
-            return
-        except Exception as e:
-            await edit_delete(event, f"**⚠️ خطأ أثناء رفع الصورة:**\n`{e}`")
-            return
+        pfile = await event.client.upload_file(profile_pic)
+        await event.client(UploadProfilePhotoRequest(file=pfile))
+    await eve.delete()
+    await event.client.send_message(
+        event.chat_id, f"⌔∮ تم بنجاح أنتحال حساب المستخدم**\n❃ أنا `{first_name}` من الآن**", reply_to=reply_message
+    )
 
-    await edit_delete(event, "**✅ تم الانتحال بنجاح!**")
 
-    if BOTLOG:
-        await event.client.send_message(
-            BOTLOG_CHATID,
-            f"#الانتحـــال\n ⪼ تم انتحـال حسـاب الشخـص ↫ [{first_name}](tg://user?id={user_id}) بنجاح ✅"
+@zedub_cmd(pattern="اعادة$")
+async def _(event):
+    name = OWNER_NAME
+    ok = ""
+    mybio = str(jmubot.me.id) + "01"
+    bio = jmdB.get_key("MYBIO") or "خطا: ضع البايو الخاص بك"
+    chc = jmdB.get_key(mybio)
+    if chc:
+        bio = chc
+    fname = jmdB.get_key(f"{jmubot.uid}02")
+    lname = jmdB.get_key(f"{jmubot.uid}03")
+    if fname:
+        name = fname
+    if lname:
+        ok = lname
+    n = 1
+    client = event.client
+    await client(
+        DeletePhotosRequest(await event.client.get_profile_photos("me", limit=n))
+    )
+    await client(UpdateProfileRequest(about=bio))
+    await client(UpdateProfileRequest(first_name=name))
+    await client(UpdateProfileRequest(last_name=ok))
+    await event.eor("**⌔∮ تم بنجاح أعادة الحساب الى وضعه الطبيعي ✅**")
+    jmdB.del_key(f"{jmubot.uid}01")
+    jmdB.del_key(f"{jmubot.uid}02")
+    jmdB.del_key(f"{jmubot.uid}03")
+
+
+async def get_full_user(event):
+    if event.reply_to_msg_id:
+        previous_message = await event.get_reply_message()
+        if previous_message.forward:
+            replied_user = await event.client(
+                GetFullUserRequest(
+                    previous_message.forward.sender_id
+                    or previous_message.forward.channel_id
+                )
+            )
+            return replied_user, None
+        replied_user = await event.client(
+            GetFullUserRequest(previous_message.sender_id)
         )
+        return replied_user, None
+    else:
+        input_str = None
+        try:
+            input_str = event.pattern_match.group(1)
+        except IndexError as e:
+            return None, e
+        if event.message.entities is not None:
+            mention_entity = event.message.entities
+            probable_user_mention_entity = mention_entity[0]
+            if isinstance(probable_user_mention_entity,
+                          MessageEntityMentionName):
+                user_id = probable_user_mention_entity.user_id
+                replied_user = await event.client(GetFullUserRequest(user_id))
+                return replied_user, None
+            try:
+                user_object = await event.client.get_entity(input_str)
+                user_id = user_object.id
+                replied_user = await event.client(GetFullUserRequest(user_id))
+                return replied_user, None
+            except Exception as e:
+                return None, e
+        elif event.is_private:
+            try:
+                user_id = event.chat_id
+                replied_user = await event.client(GetFullUserRequest(user_id))
+                return replied_user, None
+            except Exception as e:
+                return None, e
+        else:
+            try:
+                user_object = await event.client.get_entity(int(input_str))
+                user_id = user_object.id
+                replied_user = await event.client(GetFullUserRequest(user_id))
+                return replied_user, None
+            except Exception as e:
+                return None, e
