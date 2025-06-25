@@ -36,7 +36,7 @@ ZelzalDV_cmd = (
 )
 
 @zedub.zed_cmd(
-    pattern="التيم.",
+    pattern="التيم$",
     command=("تيم", "التيم"),
     info={
         "header": "يعرض كليشة مطورين تيم ReFZ™.",
