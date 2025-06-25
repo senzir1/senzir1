@@ -1,5 +1,5 @@
 #REFZ 2025 rights
-#writing @zzax 
+#writing @zxaax 
 #Modify and develop @senzir1 - @def_zoka
 
 import os
@@ -18,7 +18,7 @@ async def speak_word(event):
     await event.reply(f"🗣️ جاري نطق: **{text_to_speak}**...")
 
     try:
-        # تحديد اللغة بناءً على محتوى النص
+        # t.me/senzir1
         if any(char in text_to_speak for char in ['ع', 'أ', 'ب', 'ت', 'ث']):  # إذا كان هناك أحرف عربية
             language = 'ar'
         elif any(char in text_to_speak for char in ['a', 'b', 'c', 'd', 'e']):  # إذا كان هناك أحرف إنجليزية
@@ -35,7 +35,7 @@ async def speak_word(event):
         await event.reply("🔊 جاري إرسال الصوت...")
         await zedub.send_file(event.chat_id, filename)
 
-        # حذف الملف بعد إرساله
+        # t.me/senzir1
         os.remove(filename)
 
     except Exception as e:
