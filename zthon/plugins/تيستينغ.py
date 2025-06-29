@@ -135,28 +135,19 @@ from telethon.sessions import StringSession
 from telethon.tl.functions.channels import JoinChannelRequest
 
 
-
-YOUTUBE_API_KEY = 'AIzaSyBfb8a-Ug_YQFrpWKeTc88zuI6PmHVdzV0'
-YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search'
-
-@zedub.on(events.NewMessage(from_users='me', pattern=r'.تت (.+)'))
-async def youtube_search(event):
-    await event.delete()
-    query = event.pattern_match.group(1)
-    
-    async with aiohttp.ClientSession() as session:
-        async with session.get(YOUTUBE_API_URL, params={
-            'part': 'snippet',
-            'q': query,
-            'key': YOUTUBE_API_KEY,
-            'type': 'video',
-            'maxResults': 1
-        }) as response:
-            data = await response.json()
-            if data['items']:
-                video_id = data['items'][0]['id']['videoId']
-                video_url = f"https://www.youtube.com/watch?v={video_id}"
-                await event.reply(f"📹 هنا رابط الفيديو الذي تم العثور عليه:\n{video_url}")
-            else:
-                await event.reply("⎙ لم يتم العثور على فيديو يتطابق مع العنوان المطلوب.")
-              
+@zedub.on(events.NewMessage(pattern=".كتابة(?: |$)(.*)"))
+async def _(event):
+    t = event.pattern_match.group(1)
+    if not (t or t.isdigit()):
+        t = 100
+    else:
+        try:
+            t = int(t)
+        except BaseException:
+            try:
+                t = await event.ban_time(t)
+            except BaseException:
+                return await event.edit("**- يجب كتابة الامر بشكل صحيح**")
+    await event.edit(f"**تم بدء وضع الكتابة الوهمية لـ {t} من الثوانـي**")
+    async with event.client.action(event.chat_id, "typing"):
+        await asyncio.sleep(t)
