@@ -1,6 +1,24 @@
 from ..core.managers import edit_or_reply
 from . import zedub
 
+
+
+# t.me/senzir1
+ZelzalDV_cmd_1111 = (
+    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر التقليد ](t.me/def_Zoka) 𓆪\n\n"
+    "⪼  .ازعاج\n"
+    "⪼ .الغاء ازعاج\n"
+    "⪼ .تقليد\n"
+    "⪼ .الغاء تقليد \n"
+    "⪼  .المقلدهم \n"
+    "⪼  .حذف فار المقلدهم \n"
+    "\n𓆩 [𐇮 𝙎𓏺𝞝𝙉𝙕𝙄𝙍 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/senzir1) 𓆪"
+)
+
+@zedub.zed_cmd(pattern="م29")
+async def cmd_29(event):
+    await edit_or_reply(event, ZelzalDV_cmd_1111)
+    
 # t.me/senzir1
 ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - التحديثات الجديدة ](t.me/def_Zoka) 𓆪\n\n"
