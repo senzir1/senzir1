@@ -116,4 +116,17 @@ ZelzalDV_cmd_7 = (
 @zedub.zed_cmd(pattern="م36")
 async def cmd_36(event):
     await edit_or_reply(event, ZelzalDV_cmd_7)
+
+
+# t.me/senzir1
+ZelzalDV_cmd_8 = (
+    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر تحميل مسلسلات ولافلام](t.me/def_Zoka) 𓆪\n\n"
+    "↫.يوت + اسم المسلسل او الفيلم او الي انت عايزو\n"
+    
+    "\n𓆩 [𐇮 𝙎𓏺𝞝𝙉𝙕𝙄𝙍 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/senzir1) 𓆪"
+)
+
+@zedub.zed_cmd(pattern="م37")
+async def cmd_37(event):
+    await edit_or_reply(event, ZelzalDV_cmd_8)
     
