@@ -1,4 +1,8 @@
-#Copyright (©️) -Refz - Senzir
+
+# Copyright (C) 2022 senzir . All Rights Reserved
+#جميع الحقوق محفوظة ل سورس ريفز
+# الاوامر الإضافية من م20 ل م50
+#@def_zoka - @senzir1
 
 
 from ..core.managers import edit_or_reply
@@ -360,4 +364,6 @@ ZelzalDV_cmd_20 = (
 @zedub.zed_cmd(pattern="م50")
 async def cmd_50(event):
     await edit_or_reply(event, ZelzalDV_cmd_20)
-    
+
+# Copyright (C) 2022 senzir . All Rights Reserved
+#جميع الحقوق محفوظة لدى ريفز 
