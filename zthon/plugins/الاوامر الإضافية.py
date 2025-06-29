@@ -1,3 +1,6 @@
+#Copyright ©️ -Refz - Senzir
+
+
 from ..core.managers import edit_or_reply
 from . import zedub
 
