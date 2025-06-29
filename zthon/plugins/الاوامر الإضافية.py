@@ -27,4 +27,18 @@ ZelzalDV_cmd_2 = (
 @zedub.zed_cmd(pattern="م31")
 async def cmd_31(event):
     await edit_or_reply(event, ZelzalDV_cmd_2)
+
+
+
+# t.me/senzir1
+ZelzalDV_cmd_3 = (
+    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر الانتحال ](t.me/def_Zoka) 𓆪\n\n"
+    "⪼ .انتحال\n"
+    "⪼لاعاده حسابك كمان كان ارسل  .اعاده\n"
+    "\n𓆩 [𐇮 𝙎𓏺𝞝𝙉𝙕𝙄𝙍 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/senzir1) 𓆪"
+)
+
+@zedub.zed_cmd(pattern="م32")
+async def cmd_32(event):
+    await edit_or_reply(event, ZelzalDV_cmd_3)
     
