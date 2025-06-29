@@ -163,4 +163,17 @@ ZelzalDV_cmd_10 = (
 @zedub.zed_cmd(pattern="م39")
 async def cmd_39(event):
     await edit_or_reply(event, ZelzalDV_cmd_10)
+
+
+# t.me/senzir1
+ZelzalDV_cmd_11 = (
+    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر بوت دعمكم](t.me/def_Zoka) 𓆪\n\n"
+     "↫لتجميع من بوت دعمكم ارسل .دعمكم\n"
+     "↫لايقاف التجميع ارسل .ايقاف\n"
+    "\n𓆩 [𐇮 𝙎𓏺𝞝𝙉𝙕𝙄𝙍 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/senzir1) 𓆪"
+)
+
+@zedub.zed_cmd(pattern="م40")
+async def cmd_40(event):
+    await edit_or_reply(event, ZelzalDV_cmd_11)
     
