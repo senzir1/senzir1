@@ -322,4 +322,27 @@ ZelzalDV_cmd_18 = (
 @zedub.zed_cmd(pattern="م48")
 async def cmd_48(event):
     await edit_or_reply(event, ZelzalDV_cmd_18)
+
+
+# t.me/senzir1
+ZelzalDV_cmd_19 = (
+    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر الترحب واردود](t.me/def_Zoka) 𓆪\n\n"
+"↫ .رد + نص الرد بالرد ع كلمة الرد \n"
+"↫ .رد + نص الرد بالرد ع ميديا \n"
+"↫ .حذف رد + كلمة الرد \n"
+"↫ .ردودي \n"
+"↫ .حذف الردود\n"
+"↫ .ترحيب + نص الترحيب\n"
+"↫ .ترحيب بالـرد ع رسالـه ترحيبيـه \n"
+"↫ .ترحيب بالـرد ع ميديـا تحتهـا نـص\n"
+"↫ .حذف فار الترحيب\n"
+"↫ .الترحيبات\n"
+"↫ .رد اططلـق 🥳 من يصيحني {mention}, لبيه سم آمر حبيبي \n"
+ "\n𓆩 [𐇮 𝙎𓏺𝞝𝙉𝙕𝙄𝙍 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/senzir1) 𓆪"
+"\n𓆩 [𐇮 𝐙𝐎𝐊𝐀 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/O_m_xl) 𓆪"
+)
+
+@zedub.zed_cmd(pattern="م49")
+async def cmd_49(event):
+    await edit_or_reply(event, ZelzalDV_cmd_19)
     
