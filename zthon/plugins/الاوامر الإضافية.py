@@ -287,7 +287,7 @@ ZelzalDV_cmd_16 = (
     "\n𓆩 [𐇮 𝐙𝐎𝐊𝐀 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/O_m_xl) 𓆪"
 )
 
-@zedub.zed_cmd(pattern="م45")
-async def cmd_45(event):
+@zedub.zed_cmd(pattern="م46")
+async def cmd_46(event):
     await edit_or_reply(event, ZelzalDV_cmd_16)
     
