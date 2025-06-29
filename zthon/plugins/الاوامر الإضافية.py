@@ -216,4 +216,18 @@ ZelzalDV_cmd_13 = (
 @zedub.zed_cmd(pattern="م42")
 async def cmd_42(event):
     await edit_or_reply(event, ZelzalDV_cmd_13)
+
+
+# t.me/senzir1
+ZelzalDV_cmd_14 = (
+    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر بوت فك الحظر](t.me/def_Zoka) 𓆪\n\n"
+    "↫يوزر بوت فك الحظر وتساب وتليجرام\n"
+    "↫💎𝐔𝐒𝐄𝐑: @hackmek_bot\n"
+    "\n𓆩 [𐇮 𝙎𓏺𝞝𝙉𝙕𝙄𝙍 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/senzir1) 𓆪"
+    "\n𓆩 [𐇮 𝐙𝐎𝐊𝐀 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/O_m_xl) 𓆪"
+)
+
+@zedub.zed_cmd(pattern="م43")
+async def cmd_43(event):
+    await edit_or_reply(event, ZelzalDV_cmd_14)
     
