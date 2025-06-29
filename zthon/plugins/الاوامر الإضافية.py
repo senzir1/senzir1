@@ -94,15 +94,27 @@ async def cmd_34(event):
 
 # t.me/senzir1
 ZelzalDV_cmd_6 = (
-    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر بوت استخراج الجلسات](t.me/def_Zoka) 𓆪\n\n"
-    "⪼ بوت استخراج جلسات الخاص بسورس ريفز \n"
-    "⪼(@rev_m_1bot)n"
-    "⪼برعاية المطور سينزر  \n" 
-    "⪼ ⪼ برعاية المطور زوكا \n"
+    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر التبليغ لتطير القنوات ](t.me/def_Zoka) 𓆪\n\n"
+    " ⏎ اهلا بك في اوامر البلاغات\n"
+    " ⏎لاستعمال الامر ⏎ 𐇮.بلاغ+ عدد البلاغات+ بلرد ع كود\n"
     "\n𓆩 [𐇮 𝙎𓏺𝞝𝙉𝙕𝙄𝙍 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/senzir1) 𓆪"
+    "\n𓆩 [𐇮 ⧛𝐙𝐎𝐊𝐀 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/Q_2_Q_Y) 𓆪"
 )
 
 @zedub.zed_cmd(pattern="م35")
 async def cmd_35(event):
     await edit_or_reply(event, ZelzalDV_cmd_6)
+
+# t.me/senzir1
+ZelzalDV_cmd_7 = (
+    "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر التبليغ لتطير القنوات ](t.me/def_Zoka) 𓆪\n\n"
+    " ⏎ اهلا بك في اوامر البلاغات\n"
+    " ⏎لاستعمال الامر ⏎ 𐇮.بلاغ+ عدد البلاغات+ بلرد ع كود\n"
+    "\n𓆩 [𐇮 𝙎𓏺𝞝𝙉𝙕𝙄𝙍 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/senzir1) 𓆪"
+    "\n𓆩 [𐇮 ⧛𝐙𝐎𝐊𝐀 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/Q_2_Q_Y) 𓆪"
+)
+
+@zedub.zed_cmd(pattern="م36")
+async def cmd_36(event):
+    await edit_or_reply(event, ZelzalDV_cmd_7)
     
