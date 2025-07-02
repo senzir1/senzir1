@@ -11,7 +11,7 @@ from . import zedub
 
 
 # t.me/senzir1
-ZelzalDV_cmd_1111 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر الزخرفه ](t.me/def_Zoka) 𓆪\n\n"
     " ⏎ اهلا بك في اوامر الزخرفه\n"
     " ⏎لاستعمال الامر ⏎ 𐇮.زخرفه + اسم الي تريدو\n"
@@ -22,7 +22,7 @@ ZelzalDV_cmd_1111 = (
 
 @zedub.zed_cmd(pattern="م29")
 async def cmd_29(event):
-    await edit_or_reply(event, ZelzalDV_cmd_1111)
+    await edit_or_reply(event, ZelzalDV_cmd)
     
 # t.me/senzir1
 ZelzalDV_cmd = (
@@ -40,7 +40,7 @@ async def cmd_30(event):
 
 
 # t.me/senzir1
-ZelzalDV_cmd_2 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر الانتحال ](t.me/def_Zoka) 𓆪\n\n"
     "⪼ .انتحال\n"
     "⪼لاعاده حسابك كمان كان ارسل  .اعاده\n"
@@ -49,12 +49,12 @@ ZelzalDV_cmd_2 = (
 
 @zedub.zed_cmd(pattern="م31")
 async def cmd_31(event):
-    await edit_or_reply(event, ZelzalDV_cmd_2)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 
 # t.me/senzir1
-ZelzalDV_cmd_3 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر التقليد ](t.me/def_Zoka) 𓆪\n\n"
     "⪼  .ازعاج\n"
     "⪼ .الغاء ازعاج\n"
@@ -67,11 +67,11 @@ ZelzalDV_cmd_3 = (
 
 @zedub.zed_cmd(pattern="م32")
 async def cmd_32(event):
-    await edit_or_reply(event, ZelzalDV_cmd_3)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 # t.me/senzir1
-ZelzalDV_cmd_4 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر الالعاب المتطوره ](t.me/def_Zoka) 𓆪\n\n"
     "⪼ قم بارسال .بلاي \n"
     "⪼برعاية المطور سينزر  \n" 
@@ -81,11 +81,11 @@ ZelzalDV_cmd_4 = (
 
 @zedub.zed_cmd(pattern="م33")
 async def cmd_33(event):
-    await edit_or_reply(event, ZelzalDV_cmd_4)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 # t.me/senzir1
-ZelzalDV_cmd_5 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر بوت استخراج الجلسات](t.me/def_Zoka) 𓆪\n\n"
     "⪼ بوت استخراج جلسات الخاص بسورس ريفز \n"
     "⪼(@rev_m_1bot)n"
@@ -96,11 +96,11 @@ ZelzalDV_cmd_5 = (
 
 @zedub.zed_cmd(pattern="م34")
 async def cmd_34(event):
-    await edit_or_reply(event, ZelzalDV_cmd_5)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 # t.me/senzir1
-ZelzalDV_cmd_6 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر التبليغ لتطير القنوات ](t.me/def_Zoka) 𓆪\n\n"
     " ⏎ اهلا بك في اوامر البلاغات\n"
     " ⏎لاستعمال الامر ⏎ 𐇮.بلاغ+ عدد البلاغات+ بلرد ع كود\n"
@@ -110,10 +110,10 @@ ZelzalDV_cmd_6 = (
 
 @zedub.zed_cmd(pattern="م35")
 async def cmd_35(event):
-    await edit_or_reply(event, ZelzalDV_cmd_6)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 # t.me/senzir1
-ZelzalDV_cmd_7 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر تحميل مسلسلات ولافلام](t.me/def_Zoka) 𓆪\n\n"
     "↫.يوت + اسم المسلسل او الفيلم او الي انت عايزو\n"
     
@@ -122,11 +122,11 @@ ZelzalDV_cmd_7 = (
 
 @zedub.zed_cmd(pattern="م36")
 async def cmd_36(event):
-    await edit_or_reply(event, ZelzalDV_cmd_7)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 # t.me/senzir1
-ZelzalDV_cmd_8 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر تحميل الصور](t.me/def_Zoka) 𓆪\n\n"
     "↫.صور + اسم الصور الي عايزو\n"
     "\n𓆩 [𐇮 𝙎𓏺𝞝𝙉𝙕𝙄𝙍 الهہـيـٖ͡ـ͢ـبـه 𐇮](t.me/senzir1) 𓆪"
@@ -134,10 +134,10 @@ ZelzalDV_cmd_8 = (
 
 @zedub.zed_cmd(pattern="م37")
 async def cmd_37(event):
-    await edit_or_reply(event, ZelzalDV_cmd_8)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 # t.me/senzir1
-ZelzalDV_cmd_9 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر اخرى](t.me/def_Zoka) 𓆪\n\n"
     "↫تم اضافه امر .اكينوتر\n"
     "↫تم اضافه امر .تجربه\n"
@@ -156,11 +156,11 @@ ZelzalDV_cmd_9 = (
 
 @zedub.zed_cmd(pattern="م38")
 async def cmd_38(event):
-    await edit_or_reply(event, ZelzalDV_cmd_9)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 # t.me/senzir1
-ZelzalDV_cmd_10 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر بوت دعمكم](t.me/def_Zoka) 𓆪\n\n"
      "↫لتجميع من بوت دعمكم ارسل .دعمكم\n"
      "↫لايقاف التجميع ارسل .ايقاف\n"
@@ -169,11 +169,11 @@ ZelzalDV_cmd_10 = (
 
 @zedub.zed_cmd(pattern="م39")
 async def cmd_39(event):
-    await edit_or_reply(event, ZelzalDV_cmd_10)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 # t.me/senzir1
-ZelzalDV_cmd_11 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر الروابط](t.me/def_Zoka) 𓆪\n\n"
      "↫.اختصار\n"
      "↫.الغاء اختصار\n"
@@ -188,11 +188,11 @@ ZelzalDV_cmd_11 = (
 
 @zedub.zed_cmd(pattern="م40")
 async def cmd_40(event):
-    await edit_or_reply(event, ZelzalDV_cmd_11)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 # t.me/senzir1
-ZelzalDV_cmd_12 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر الذاتيه](t.me/def_Zoka) 𓆪\n\n"
     "↫.تفعيل الذاتيه\n"
     "↫.تعطيل الذاتيه\n"
@@ -205,11 +205,11 @@ ZelzalDV_cmd_12 = (
 
 @zedub.zed_cmd(pattern="م41")
 async def cmd_41(event):
-    await edit_or_reply(event, ZelzalDV_cmd_12)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 # t.me/senzir1
-ZelzalDV_cmd_13 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر بوت فك الحظر](t.me/def_Zoka) 𓆪\n\n"
     "↫يوزر بوت فك الحظر وتساب وتليجرام\n"
     "↫💎𝐔𝐒𝐄𝐑: @hackmek_bot\n"
@@ -219,11 +219,11 @@ ZelzalDV_cmd_13 = (
 
 @zedub.zed_cmd(pattern="م42")
 async def cmd_42(event):
-    await edit_or_reply(event, ZelzalDV_cmd_13)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 # t.me/senzir1
-ZelzalDV_cmd_14 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر المكالمات](t.me/def_Zoka) 𓆪\n\n"
     "↫.بدء مكالمه\n"
     "↫ .انهاء مكالمه\n"
@@ -241,12 +241,12 @@ ZelzalDV_cmd_14 = (
 
 @zedub.zed_cmd(pattern="م43")
 async def cmd_43(event):
-    await edit_or_reply(event, ZelzalDV_cmd_14)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 
 # t.me/senzir1
-ZelzalDV_cmd_15 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر الميوزك](t.me/def_Zoka) 𓆪\n\n"
     "↫.شغل + رابـط او بالـرد ع مقطـع صوتـي\n"
      "↫.فيد + رابـط او بالـرد ع مقطـع فيديـو\n"
@@ -267,12 +267,12 @@ ZelzalDV_cmd_15 = (
 
 @zedub.zed_cmd(pattern="م44")
 async def cmd_44(event):
-    await edit_or_reply(event, ZelzalDV_cmd_15)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 
 # t.me/senzir1
-ZelzalDV_cmd_16 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر الايميلات](t.me/def_Zoka) 𓆪\n\n"
 "↫لانشاء ايميل وهمي للاشتراك في هيركو\n"
 "↫.بريد \n"
@@ -285,12 +285,12 @@ ZelzalDV_cmd_16 = (
 
 @zedub.zed_cmd(pattern="م46")
 async def cmd_46(event):
-    await edit_or_reply(event, ZelzalDV_cmd_16)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 
 # t.me/senzir1
-ZelzalDV_cmd_17 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر الكيثاب](t.me/def_Zoka) 𓆪\n\n"
 "↫ لاستعمال الامر هكذا \n"
 "↫(  رابـط من كيثاب + الريبو) \n"
@@ -301,12 +301,12 @@ ZelzalDV_cmd_17 = (
 
 @zedub.zed_cmd(pattern="م47")
 async def cmd_47(event):
-    await edit_or_reply(event, ZelzalDV_cmd_17)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 
 # t.me/senzir1
-ZelzalDV_cmd_18 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر الترحب واردود](t.me/def_Zoka) 𓆪\n\n"
 "↫ .رد + نص الرد بالرد ع كلمة الرد \n"
 "↫ .رد + نص الرد بالرد ع ميديا \n"
@@ -325,11 +325,11 @@ ZelzalDV_cmd_18 = (
 
 @zedub.zed_cmd(pattern="م48")
 async def cmd_48(event):
-    await edit_or_reply(event, ZelzalDV_cmd_18)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 # t.me/senzir1
-ZelzalDV_cmd_19 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - امر التحزيرات والمنع](t.me/def_Zoka) 𓆪\n\n"
 "↫ .تحذير \n"
 "↫ .التحذيرات\n"
@@ -349,11 +349,11 @@ ZelzalDV_cmd_19 = (
 
 @zedub.zed_cmd(pattern="م49")
 async def cmd_49(event):
-    await edit_or_reply(event, ZelzalDV_cmd_19)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 
 # t.me/senzir1
-ZelzalDV_cmd_20 = (
+ZelzalDV_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐄𝐅𝐙 - اوامر التكرار](t.me/def_Zoka) 𓆪\n\n"
 "↫ .ضع التكرار \n"
 "↫ ملاحظه يجب تفعيل الامر بداخل الكروب لمنع التكرار بالمجموعه وتقييد المستخدم عند التكرار \n"
@@ -363,7 +363,7 @@ ZelzalDV_cmd_20 = (
 
 @zedub.zed_cmd(pattern="م50")
 async def cmd_50(event):
-    await edit_or_reply(event, ZelzalDV_cmd_20)
+    await edit_or_reply(event, ZelzalDV_cmd)
 
 # Copyright (C) 2022 senzir . All Rights Reserved
 #جميع الحقوق محفوظة لدى ريفز 
