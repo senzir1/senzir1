@@ -79,7 +79,7 @@ elif os.path.exists("config.py"):
 
 bot = zedub
 
-DEV = 6301863282
+DEV = 7422264678
 
 
 
@@ -89,7 +89,7 @@ async def setup_bot():
 
     """
 
-    To set up bot for zthon
+    To set up bot for refz
 
     """
 
