@@ -29,14 +29,14 @@ from . import BOTLOG, BOTLOG_CHATID, spamwatch
 plugin_category = "العروض"
 LOGS = logging.getLogger(__name__)
 
-zed_dev = (6583951825, 5895554306, 9848752505, 528089206, 54281890871)
-zel_dev = (6583951825, 5451890871, 9373975462)
-zelzal = (1260465030, 1895219306, 5280339206)
+zed_dev = ()
+zel_dev = ()
+zelzal = ()
 ZIDA = gvarstatus("Z_ZZID") or "zvhhhclc"
 Zel_Uid = zedub.uid
 
 ZED_BLACKLIST = [
-    -1002210064347,
+    -1001550451021,
     ]
 
 async def get_user_from_event(event):
